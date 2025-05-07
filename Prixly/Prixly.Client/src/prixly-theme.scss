@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use './styles/theme-colors.scss' as prixly;
+
+:root {
+  @include mat.theme(( color: ( theme-type: light, primary: prixly.$primary-palette, tertiary: prixly.$tertiary-palette ), typography: ( brand-family: Montserrat, plain-family: sans-serif ), density: 0 ));
+}
+
+.dark-theme {
+  @include mat.theme(( color: ( theme-type: dark, primary: prixly.$primary-palette, tertiary: prixly.$tertiary-palette ), typography: ( brand-family: Montserrat, plain-family: sans-serif ), density: 0 ));
+}

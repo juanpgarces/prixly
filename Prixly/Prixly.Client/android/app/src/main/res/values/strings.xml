@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">prixly</string>
+    <string name="title_activity_main">prixly</string>
+    <string name="package_name">com.prixly.app</string>
+    <string name="custom_url_scheme">com.prixly.app</string>
+</resources>
