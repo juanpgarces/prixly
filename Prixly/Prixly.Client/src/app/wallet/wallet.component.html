@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="mat-elevation-z2">
+  <span class="title">Wallet</span>
+  <span class="spacer"></span>
+  <button mat-stroked-button>Log out</button>
+</mat-toolbar>
+
+<div class="wallet-container">
+  <mat-card *ngFor="let card of cards; let i = index" class="wallet-card mat-elevation-z1">
+    <mat-card-title>{{ card.bank }}</mat-card-title>
+    <mat-card-content>
+      <div class="masked">•••• •••• •••• ••••</div>
+      <div class="details">{{ card.name }} &nbsp;&nbsp; {{ card.exp }}</div>
+      <button mat-stroked-button color="primary" (click)="editCard(card, i, false)">Edit</button>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="add-card-btn">
+    <button mat-stroked-button color="primary" (click)="editCard(card, i)">
+      <mat-icon>add</mat-icon> Add card
+    </button>
+  </div>
+</div>
