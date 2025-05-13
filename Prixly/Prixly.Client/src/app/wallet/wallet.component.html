@@ -1,5 +1,8 @@
 <mat-toolbar color="primary" class="mat-elevation-z2">
-  <span class="title">Wallet</span>
+  <div [routerLink]="'/'">
+    <img src="prixly_logo.png" alt="Prixly Logo" height="32" style="margin-right: 8px;" />
+    <span class="title">Wallet</span>
+  </div>
   <span class="spacer"></span>
   <button mat-stroked-button>Log out</button>
 </mat-toolbar>
@@ -15,7 +18,7 @@
   </mat-card>
 
   <div class="add-card-btn">
-    <button mat-stroked-button color="primary" (click)="editCard(card, i)">
+    <button mat-stroked-button color="primary" (click)="editCard(null, cards.length)">
       <mat-icon>add</mat-icon> Add card
     </button>
   </div>

@@ -1,11 +1,23 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AddcardComponent } from '../addcard/addcard.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon'; // <-- ADD THIS
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-wallet',
-  imports: [],
+  imports: [CommonModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    RouterModule],
   templateUrl: './wallet.component.html',
-  styleUrl: './wallet.component.css'
+  styleUrl: './wallet.component.scss'
 })
 export class WalletComponent {
   cards: any[] = [];
@@ -16,7 +28,7 @@ export class WalletComponent {
   }
 
   editCard(card: any, index: number, newcard: boolean = true): void {
-    const dialogRef = this.dialog.open(/**/, {
+    const dialogRef = this.dialog.open(AddcardComponent, {
       width: '300px',
       data: { ...card, newcard }
     });
