@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Prixly.API": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7102"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "containerRunArguments": "--init",
+      "httpPort": 30609,
+      "useSSL": false
+    }
+  }
+}
