@@ -9,10 +9,10 @@
 
 <div class="wallet-container">
   <mat-card *ngFor="let card of cards; let i = index" class="wallet-card mat-elevation-z1">
-    <mat-card-title>{{ card.bank }}</mat-card-title>
+    <mat-card-title>{{ card.bankGuid }}</mat-card-title>
     <mat-card-content>
       <div class="masked">•••• •••• •••• ••••</div>
-      <div class="details">{{ card.name }} &nbsp;&nbsp; {{ card.exp }}</div>
+      <div class="details">{{ card.name }}</div>
       <button mat-stroked-button color="primary" (click)="editCard(card, i, false)">Edit</button>
     </mat-card-content>
   </mat-card>

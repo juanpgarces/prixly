@@ -1,34 +1,26 @@
 <h2 mat-dialog-title *ngIf="!newcard">Edit Card</h2>
-<h2 mat-dialog-title *ngIf="newcard">Edit Card</h2>
+<h2 mat-dialog-title *ngIf="newcard">Add Card</h2>
 <mat-dialog-content>
   <form>
-    <mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Bank</mat-label>
-      <mat-select [(ngModel)]="data.bank" name="bank" id="bank">
-        @for (bank of banks; track bank) {
-        <mat-option [value]="bank.id">{{bank.name}}</mat-option>
-        }
+      <mat-select [(ngModel)]="data.bankGuid" name="bankGuid" id="bankGuid">
+        <mat-option *ngFor="let bank of banks" [value]="bank.guid">{{ bank.name }}</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Card Name</mat-label>
-      <mat-select [(ngModel)]="data.card" name="cardname" id="cardname">
-        @for (cards of cards; track card) {
-        <mat-option [value]="card.id">{{card.name}}</mat-option>
-        }
+      <mat-select [(ngModel)]="data.name" name="cardName" id="cardName">
+        <mat-option *ngFor="let card of cards" [value]="card.name">{{ card.name }}</mat-option>
       </mat-select>
     </mat-form-field>
-    <!--<mat-form-field appearance="outline" class="full-width">
-      <mat-label>Bank</mat-label>
-      <input matInput [(ngModel)]="data.bank">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Description</mat-label>
+      <input matInput [(ngModel)]="data.description" name="description" id="description">
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Card Type</mat-label>
-      <input matInput [(ngModel)]="data.name">
-    </mat-form-field>-->
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Last 4</mat-label>
-      <input type="number" matInput [(ngModel)]="data.last">
+      <mat-label>Image URL</mat-label>
+      <input matInput [(ngModel)]="data.imageUrl" name="imageUrl" id="imageUrl">
     </mat-form-field>
   </form>
 </mat-dialog-content>

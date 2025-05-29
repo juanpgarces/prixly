@@ -1,5 +1,5 @@
-import { CustomRewardRuleDto } from './custom-reward-rule.dto';
-import { StandardRewardRuleDto } from './standard-reward-rule.dto';
+import { CustomRewardRuleDto } from "./custom-reward-rule-dto";
+import { StandardRewardRuleDto } from "./standard-reward-rule-dto";
 
 export interface CreditCardDto {
   guid: string;

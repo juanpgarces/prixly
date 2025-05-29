@@ -8,5 +8,9 @@
         Groceries,
         Travel,
         Streaming,
+        Utilities,
+        Entertainment,
+        OnlineRetail,
+        Health,
     }
 }

@@ -1,4 +1,4 @@
-import { BonusType } from './enums/bonus-type.enum';
+import { BonusType } from "./enums/bonus-type";
 
 export interface CustomRewardRuleDto {
   store: string;

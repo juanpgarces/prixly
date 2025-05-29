@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon'; // <-- ADD THIS
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CreditCardDto } from '../../models/credit-card-dto';
 
 @Component({
   selector: 'app-wallet',
@@ -20,7 +21,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './wallet.component.scss'
 })
 export class WalletComponent {
-  cards: any[] = [];
+  cards: CreditCardDto[] = [];
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -42,9 +43,36 @@ export class WalletComponent {
 
   getCards() {
     this.cards = [
-      { bank: 'Chase', name: 'JANE DOE', exp: '04/26' },
-      { bank: 'American Express', name: 'JANE DOE', exp: '11/25' },
-      { bank: 'Capital One', name: 'JANE DOE', exp: '08/24' },
+      {
+        guid: '1a2b3c4d-1111-2222-3333-444455556666',
+        name: 'Chase Sapphire Preferred',
+        description: 'Travel rewards credit card',
+        bankGuid: 'bank-001',
+        imageUrl: 'https://example.com/images/chase-sapphire.png',
+        isActive: true,
+        customRewardRules: [],
+        standardRewardRules: []
+      },
+      {
+        guid: '2b3c4d5e-2222-3333-4444-555566667777',
+        name: 'American Express Gold',
+        description: 'Premium dining and grocery rewards',
+        bankGuid: 'bank-002',
+        imageUrl: 'https://example.com/images/amex-gold.png',
+        isActive: true,
+        customRewardRules: [],
+        standardRewardRules: []
+      },
+      {
+        guid: '3c4d5e6f-3333-4444-5555-666677778888',
+        name: 'Capital One Venture',
+        description: 'Flat-rate travel rewards',
+        bankGuid: 'bank-003',
+        imageUrl: 'https://example.com/images/capitalone-venture.png',
+        isActive: false,
+        customRewardRules: [],
+        standardRewardRules: []
+      }
     ];
   }
 }

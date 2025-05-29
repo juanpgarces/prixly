@@ -1,5 +1,5 @@
-import { BonusType } from './enums/bonus-type.enum';
-import { MerchantCategoryCode } from './enums/merchant-category-code.enum';
+import { BonusType } from "./enums/bonus-type";
+import { MerchantCategoryCode } from "./enums/merchant-category-code";
 
 export interface StandardRewardRuleDto {
   category: MerchantCategoryCode;
