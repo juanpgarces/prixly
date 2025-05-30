@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Sign In</h2>
+<mat-dialog-content class="signin-body">
+  <button mat-raised-button color="primary" class="auth-button" (click)="loginWith('microsoft')">
+    <mat-icon svgIcon="microsoft"></mat-icon> Continue with Microsoft
+  </button>
+  <button mat-raised-button color="primary" class="auth-button" (click)="loginWith('github')">
+    <mat-icon svgIcon="github"></mat-icon> Continue with GitHub
+  </button>
+</mat-dialog-content>

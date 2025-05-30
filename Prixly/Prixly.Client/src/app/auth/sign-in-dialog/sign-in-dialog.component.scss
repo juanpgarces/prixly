@@ -1,0 +1,18 @@
+.signin-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+
+  .auth-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  mat-icon {
+    font-size: 20px;
+  }
+}
